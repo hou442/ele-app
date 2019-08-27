@@ -1,4 +1,4 @@
-<template>
+	<template>
   <div class="index">
     <router-view></router-view>
     <TabBar :data="tabbarData"/>
@@ -16,7 +16,7 @@ export default {
         { title: "订单", icon: "file-text-o", path: "/order" },
         { title: "我的", icon: "user", path: "/me" }
       ]
-    };
+    };	
   },
   components: {
     TabBar

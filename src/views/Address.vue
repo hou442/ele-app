@@ -84,6 +84,7 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     // console.log(to.params.city + "test");
+    //接收从home传来的city
     next(vm => {
       vm.city = to.params.city;
     });

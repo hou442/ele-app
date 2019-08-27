@@ -15,7 +15,7 @@ const router = new Router({
       children: [
         {
           path: '',
-          redirect: '/home'
+          redirect: '/login'
         },
         {
           path: '/home',
@@ -76,6 +76,36 @@ const router = new Router({
       path: '/login',
       name: 'login',
       component: () => import('./views/Login.vue')
+    },
+    {
+      path: '/myaddress',
+      name: 'myaddress',
+      component: () => import('./views/orders/MyAddress.vue')
+    },
+    {
+      path: '/addaddress',
+      name: 'addaddress',
+      component: () => import('./views/orders/AddAddress.vue')
+    },
+    {
+      path: '/settlement',
+      name: 'settlement',
+      component: () => import('./views/orders/Settlement.vue')
+    },
+    {
+      path: '/remark',
+      name: 'remark',
+      component: () => import('./views/orders/Remark.vue')
+    },
+    {
+      path: '/pay',
+      name: 'pay',
+      component: () => import('./views/orders/Pay.vue')
+    },
+    {
+      path: '/orderinfo',
+      name: 'orderinfo',
+      component: () => import('./views/orders/OrderInfo.vue')
     }
   ]
 });

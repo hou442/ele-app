@@ -40,7 +40,9 @@
 
             <!-- 导航 -->
             <Navbar/>
-            <router-view></router-view>
+            <keep-alive>
+              <router-view></router-view>
+            </keep-alive>
         </nav>
     </div>
 </template>

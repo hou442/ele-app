@@ -60,10 +60,10 @@ export default {
           code: this.verifyCode
         })
         .then(res => {
-          // console.log(res);
+          console.log(res.data);
           // 检验成功 设置登录状态并且跳转到/
-          localStorage.setItem("ele_login", true);
-          this.$router.push("/");
+          localStorage.setItem("ele_login", res.data.user._id);
+          this.$router.push("/home");
         })
         .catch(err => {
           // 返回错误信息
@@ -78,8 +78,8 @@ export default {
         // 发送网络请求
         this.$axios
           .post("/api/posts/sms_send", {
-            tpl_id: "136729",
-            key: "795be723dd9e88c3ea98e2b6713ab795",
+            tpl_id: "164732",
+            key: "c52303e0178aba4c585d18dab8c58ef4",
             phone: this.phone
           })
           .then(res => {

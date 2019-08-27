@@ -41,9 +41,9 @@
                                 <span>{{item.description}}</span>
                             </div>
                             <!-- 内容下 -->
-                            <div @click="handleFood(food)" class="fooddetails" v-for="(food,index) in item.foods" :key="index">
+                            <div  class="fooddetails" v-for="(food,index) in item.foods" :key="index">
                                 <!-- 左 -->
-                                <img :src="food.image_path" alt="">
+                                <img @click="handleFood(food)" :src="food.image_path" alt="">
                                 <!-- 右 -->
                                 <section class="fooddetails-info">
                                     <h4>{{food.name}}</h4>
@@ -123,7 +123,7 @@ export default {
               click:true
             })
             this.foodScroll.on("scroll",pos => {
-              // console.log(pos.y);
+              // console.log(pos);
               this.scrollY = Math.abs(Math.round(pos.y));
             })
         },
@@ -146,10 +146,11 @@ export default {
           for(var i=0;i < foodlist.length - 1;i++){
             let item = foodlist[i];
             //累加
+            // console.log(item);
+            //html自带的可视高度
             height += item.clientHeight;
             this.listHeight.push(height);
-            // console.log(this.listHeight);
-            
+            console.log(this.listHeight); 
           }
         },
         handleFood(food){

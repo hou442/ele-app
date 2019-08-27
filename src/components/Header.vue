@@ -1,7 +1,8 @@
 <template>
   <div class="header">
     <!-- 左侧返回 -->
-    <div class="header-button is-left" v-show="isLeft">
+    <div class="header-button is-left" 
+    v-show="isLeft" @click="$router.go(-1)">
       <i class="fa fa-chevron-left"></i>
       <button @click="$router.go(-1)">返回</button>
     </div>
@@ -55,6 +56,7 @@ export default {
 }
 .header-title {
   flex: 1;
+  /* margin-left: -1.25rem; */
 }
 .is-left {
   text-align: left;

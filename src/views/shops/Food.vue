@@ -6,7 +6,7 @@
                 @click="$emit('close')">
             </div>
             <div class="foodpanel-body">
-                <div class="foodpanel-fooding">
+                <div class="foodpanel-foodimg">
                     <img :src="food.image_path" alt="">
                 </div>
                 <div class="foodpanel-foodinfo">
